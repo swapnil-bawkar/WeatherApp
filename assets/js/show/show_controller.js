@@ -12,7 +12,8 @@ define(["app", "show/show_view", "common/views"], function(WeatherApp, ShowView,
 					});	
 					WeatherApp.mainRegion.show(collectionView);
 					Show.Controller.entityCollection.fetch({
-						success : Show.Controller.hideLoader
+						success: Show.Controller.hideLoader,
+						faillure: Show.Controller.hideLoader
 					});
 
 					var formView = new ShowView.FormView();
@@ -23,9 +24,8 @@ define(["app", "show/show_view", "common/views"], function(WeatherApp, ShowView,
 				var loadingView = new CommonViews.Loading();
 				WeatherApp.loadingSpinRegion.show(loadingView);
 				this.entityCollection.fetch({
-					success : function(){
-						WeatherApp.loadingSpinRegion.close();
-					}
+					success: Show.Controller.hideLoader,
+					faillure: Show.Controller.hideLoader
 				});
 			},
 			hideLoader: function(){
