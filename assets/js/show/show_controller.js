@@ -12,16 +12,14 @@ define(["app", "show/show_view", "common/views"], function(WeatherApp, ShowView,
 					});	
 					WeatherApp.mainRegion.show(collectionView);
 					Show.Controller.entityCollection.fetch({
-						success : function(){
-							WeatherApp.loadingSpinRegion.close();
-						}
+						success : Show.Controller.hideLoader
 					});
 
 					var formView = new ShowView.FormView();
 					Show.Controller.listenTo(formView,'submit',Show.Controller.onFormSubmit);
 				});
 			},
-			onFormSubmit : function(city) {
+			onFormSubmit: function(city) {
 				var loadingView = new CommonViews.Loading();
 				WeatherApp.loadingSpinRegion.show(loadingView);
 				this.entityCollection.fetch({
@@ -29,6 +27,9 @@ define(["app", "show/show_view", "common/views"], function(WeatherApp, ShowView,
 						WeatherApp.loadingSpinRegion.close();
 					}
 				});
+			},
+			hideLoader: function(){
+				WeatherApp.loadingSpinRegion.close();
 			}
 		};
 		_.extend(Show.Controller, Backbone.Events);
