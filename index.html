@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" data-framework="backbonejs">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Marionette Backbone.js</title>
+		<link rel="stylesheet" href="assets/css/bootstrap.css">
+	</head>
+	<body>
+	
+	<div class="container">
+		<div id="formView" style="margin-top:5px">
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<label class="sr-only" for="exampleInputCity">City</label>
+					<input type="text" class="form-control" id="exampleInputCity"
+						placeholder="Pune">
+				</div>
+				<button type="submit" class="submit btn btn-default">Submit</button>
+			</form>
+		</div>
+		<div id="loadingSpin" class="container"></div>
+		<div id="mainView" class="container"></div>
+	</div>
+		
+	<script data-main="./assets/js/require_main.js"
+src="./assets/js/vendor/require.js"></script>
+	</body>
+</html>
