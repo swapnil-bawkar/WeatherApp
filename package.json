@@ -1,8 +1,73 @@
 {
+  "webexe_settings": {
+    "linux-x32": false,
+    "windows-x64": true,
+    "download_dir": "C:\\\\Users\\\\Swapnil.bawkar\\\\Downloads\\\\Web2ExeWin\\\\files\\\\downloads",
+    "nw_compression_level": 5,
+    "mac-x32": false,
+    "windows-x32": false,
+    "mac-x64": false,
+    "nw_version": "0.11.6",
+    "force_download": false,
+    "linux-x64": false
+  },
+  "js-flags": "",
   "name": "WeatherApp",
+  "single-instance": true,
+  "nodejs": true,
+  "description": "",
+  "additional_trust_anchors": "",
+  "user-agent": "",
+  "inject-js-end": "",
+  "keywords": [],
+  "window": {
+    "transparent": false,
+    "fullscreen": false,
+    "resizable": false,
+    "title": "WeatherApp",
+    "always-on-top": false,
+    "frame": true,
+    "height": 480,
+    "exe_icon": "",
+    "visible": true,
+    "as_desktop": true,
+    "position": "",
+    "show_in_taskbar": true,
+    "mac_icon": "",
+    "width": 640,
+    "toolbar": false,
+    "icon": ""
+  },
   "version": "0.1.0",
+  "snapshot": "",
+  "node-main": "",
+  "inject-js-start": "",
+  "webkit": {
+    "page-cache": false,
+    "java": false,
+    "plugin": false
+  },
+  "testling": {
+    "harness": "mocha-bdd",
+    "files": "test/*.js",
+    "browsers": [
+      "ie/9..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6",
+      "ipad/6",
+      "android-browser/latest"
+    ]
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-requirejs": "~0.4.4"
-  }
+    "grunt-contrib-requirejs": "~0.4.4",
+    "chai": "~2.1.1",
+    "mocha": "~2.1.0"
+  },
+  "node-remote": "",
+  "main": "index.html",
+  "chromium-args": ""
 }

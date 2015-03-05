@@ -1,4 +1,4 @@
-define(["app", "tpl!show/tpl/main_view.tpl"], function(WeatherApp, mainViewTemplate){
+define(["app", "tpl!show/tpl/main_view.html"], function(WeatherApp, mainViewTemplate){
 	WeatherApp.module('Show', function(Show, WeatherApp, Backbone, Marionette, $, _){
 		
 		Show.ItemView = Marionette.ItemView.extend({

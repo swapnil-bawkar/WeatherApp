@@ -2,7 +2,8 @@ define(["app", "show/show_view", "common/views"], function(WeatherApp, ShowView,
 	WeatherApp.module("Show", function(Show, WeatherApp, Backbone, Marionette, $, _) {
 		Show.Controller = {
 			showView: function() {
-				require(["entity/entity"], function(Entity) {
+				var entity = "entity/entity";
+				require([entity], function(Entity) {
 					var loadingView = new CommonViews.Loading();
 					WeatherApp.loadingSpinRegion.show(loadingView);
 			        
