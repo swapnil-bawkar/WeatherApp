@@ -6,6 +6,7 @@ define(["marionette"], function(Marionette) {
 		mainRegion: "#mainView"
 	});
 
+	
 	WeatherApp.on("initialize:after", function() {
 		require(["show/show_controller"], function (ShowController) {
 			ShowController.showView();
