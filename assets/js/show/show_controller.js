@@ -24,6 +24,7 @@ define(["app", "show/show_view", "common/views"], function(WeatherApp, ShowView,
 			onFormSubmit: function(city) {
 				var loadingView = new CommonViews.Loading();
 				WeatherApp.loadingSpinRegion.show(loadingView);
+				this.entityCollection.fetchWeather(city);
 				this.entityCollection.fetch({
 					success: Show.Controller.hideLoader,
 					faillure: Show.Controller.hideLoader

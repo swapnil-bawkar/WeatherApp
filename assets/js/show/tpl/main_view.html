@@ -1,0 +1,35 @@
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Date</th>
+		    <th><%=new Date(dt)%></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+        	<td>Humidity</td>
+        	<td><%=main.humidity%></td>
+        </tr>
+		<tr>
+        	<td>Pressure</td>
+        	<td><%=main.pressure%></td>
+        </tr>
+		<tr>
+        	<td>Speed</td>
+        	<td><%=wind.speed%></td>
+        </tr>
+		<tr>
+            <td>Morning Temperature</td>
+        	<td><%=Math.round(main.temp - 272.15)%></td>
+        </tr>
+		<tr>
+            <td>Max Temperature</td>
+        	<td><%=Math.round(main.temp_max - 272.15)%></td>
+        </tr>
+		<tr>
+        	<td>Min Temperature</td>
+        	<td><%=Math.round(main.temp_min - 272.15)%></td>
+        </tr>
+		
+	</tbody>
+</table>

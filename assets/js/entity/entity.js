@@ -8,14 +8,10 @@ define(["app"], function(WeatherApp) {
 		});
 		
 		Entity.Collection = Backbone.Collection.extend({
-			 url : 'http://api.openweathermap.org/data/2.5/forecast/daily?q=London&mode=json&units=metric&cnt=5',
+			 url : 'http://api.openweathermap.org/data/2.5/weather?q=Pune&appid=affaa91efadc905013e46b826000a8fa',
 			 model :  Entity.Model,
-			 parse : function(data) {
-				 return data.list;
-			 },
 			 fetchWeather : function(city) {
-				 this.url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q='+city+'&mode=json&units=metric&cnt=5';
-				 this.fetch();
+				 this.url = 'http://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=affaa91efadc905013e46b826000a8fa';
 			 }
 		});
 	});
